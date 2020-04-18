@@ -1,0 +1,105 @@
+% MIT License
+%
+% Copyright (c) 2018 José Nascimento <joseaugustodearaujonascimento@gmail.com>
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\chapter{Introdução}
+
+A Escola Virtual de Governo (EV.G) é uma iniciativa da Escola Nacional de Administração Pública (ENAP), junto a escolas de governo e outras instituições parceiras.
+Esta iniciativa consiste em um portal único para oferta de capacitação a distância voltado a servidores públicos e cidadãos de todo o país.
+A EV.G oferece cursos a distância de diferentes instituições e em diferentes temáticas ligadas à administração pública e à cidadania, viabilizando o desafio de contribuir para a formação e o desenvolvimento de milhares de servidores públicos bem como dos cidadãos.
+
+A EV.G surge no âmbito de uma tendência mundial de ampliação da oferta de cursos a distância em um modelo que ficou conhecido como Massive Open Online Courses (MOOC)\footnote{Curso Online Aberto e Massivo, do inglês Massive Open Online Course (MOOC), é um tipo de curso aberto oferecido por meio de ambientes virtuais de aprendizagem, ferramentas da Web 2.0 ou redes sociais que visam oferecer para um grande número de alunos a oportunidade de ampliar seus conhecimentos num processo de co-produção~\cite{Mooc}.}. Apesar das controvérsias a respeito desse modelo de oferta de cursos a distância, ele influenciou grandes iniciativas de ampliação e abertura de cursos, o que permitiu o acesso gratuito a milhões de alunos a conteúdos antes restritos. Plataformas pioneiras internacionais, como Coursera, edX, e outras brasileiras, como Veduca, democratizaram a oferta de conteúdos de universidades renomadas como Harvard, Stanford, Universidade de São Paulo, entre outras. Passaram a lidar com cenários de oferta a milhões de alunos. 
+
+Para se ter uma ideia deste fenômeno, em 2017, a Escola Virtual Enap alcançou um quantitativo de 358 mil matrículas, um aumento de 70,65\% em relação ao ano anterior~\cite{EVGnumeros}.
+Com o lançamento da EV.G em 2018, e a oferta dos cursos nesse formato, a expectativa é que este número cresça ainda mais.
+Contudo, apesar do foco na oferta massiva de cursos, em que o atendimento ao usuário pode ser considerado um diferencial competitivo, a EV.G ainda não dispõe de um central de atendimento aos alunos propriamente dita.
+
+Proporcionalmente ao aumento de matrículas, crescem também as demandas de atendimento dos alunos. Oferecer um serviço massivo sem a devida capacidade de atendimento aos usuários representa um risco para a qualidade e a sustentabilidade do serviço prestado. De um lado, tem-se a insatisfação dos usuários causada pela falta de atendimento, e, de outro, a incapacidade do provedor de colher informações que são estratégicas para a melhoria contínua dos serviços e para a tomada de decisão.
+
+Para dar conta desses novos modelos de prestação de serviços baseados em grande quantidade, o atendimento a usuário vem evoluindo de modelos mais personalizados para modelos mais massivos de atendimento. Os modelos personalizados continuam ainda sendo diferencial competitivo de serviços que buscam atender públicos exclusivos, como é o caso da segmentação de públicos oferecida pelos bancos em geral, mas a busca pela automatização do atendimento, com vistas a agilizar o tempo de resposta e reduzir os custos, é uma tendência geral, inclusive no âmbito de contextos de atendimento mais personalizados. 
+
+Em uma publicação recente, o SEBRAE estimou que o custo mínimo de criação de uma central de atendimento em uma empresa com cinco estações de trabalho, estabelecida em uma área de 50 metros quadrados, exige um investimento inicial estimado em torno de R\$ 55 mil \cite{SebraeCallCenter}.
+Sem acrescentar o custo e esforço de manter o atendimento por 24 horas/dia para atender demandas de serviços oferecidos de forma ininterrupta, como é o caso da EV.G
+
+Com o avanço tecnológico, soluções inovadoras e de baixo custo estão surgindo a todo momento.
+No cenário do atendimento on-line, o uso de \textit{chatbots} é uma opção de baixo custo e alto desempenho \cite{CallCenterInf}.
+Como tal, o \textit{chatbot} é uma solução possível para atendimento massificado via algum método de conversação, como por exemplo em aplicações de mensagens instantâneas.
+Em teoria, o \textit{chatbot} não tem limite de atendimento simultâneo de alunos, nem tão pouco de horário de atendimento, por ser um programa de computador.
+O que torna ideal para atendimento em ambiente virtual de aprendizagem de alta disponibilidade.
+
+No âmbito da EV.G, observa-se que grande parte das solicitações dos alunos referem-se a assuntos simples, repetitivos e facilmente resolvidos a partir de uma consulta a informações disponíveis em banco de dados. É o caso de dúvidas relativas à emissão de certificados, procedimentos de inscrição, credenciais de acesso, entre outros. Dúvidas qualitativas, referentes à conteúdos, situações inéditas, por exemplo, são raras e podem ser direcionadas para um atendimento de segundo nível.   
+
+Nesse contexto da EV.G de atendimento massivo a usuários em cursos a distância, e considerando duas premissas fundamentais, quais sejam, (1) a dificuldade de construir e manter uma central de atendimento e (2) a existência de um conteúdo geral de atendimento favorável à automação do processo de interação, foi desenvolvido um \textit{chatbot} de conversação textual compatível com a plataforma mensagens instantâneas chamada Telegram, denominado EV.G Virtual Assistant (EVA). O objetivo geral de EVA é automatizar a interação via texto no atendimento administrativo de primeiro nível a alunos no âmbito da secretaria acadêmica da EV.G.
+
+\section{Objetivos}\label{cap:01:sec:01:objetivos}
+
+Nesta seção são definidos os objetivos gerais e específicos do trabalho.
+
+
+\subsection{Objetivos Gerais}\label{cap:01:sec:01:sub:01:objetivo-geral}
+
+É objetivo geral deste, o desenvolvimento do \textit{chatbot} EVA, que irá automatizar a interação via texto no atendimento administrativo de primeiro nível a alunos no âmbito da secretaria acadêmica da EV.G.
+
+
+\subsection{Objetivos Específicos}\label{cap:01:sec:01:sub:02:ojetivos-especificos}
+
+Fazem parte dos objetivos específicos:
+
+\begin{enumerate}[label=\alph*)]
+\tightlist
+\item
+especificação e detalhamento dos principais requisitos do projeto;
+\item
+elaboração dos diálogos de EVA;
+\item 
+desenvolvimento de uma Application Programming Interface (API) para EVA;
+\item
+desenvolvimento do \textit{chatbot} EVA compatível com a plataforma de mensagens instantâneas Telegram.
+\end{enumerate}
+
+
+% ------------------------------
+
+\section{Delimitações do trabalho}\label{cap:01:sec:03:delimitacao}
+
+É válido ressaltar algumas delimitações deste trabalho:
+
+\begin{enumerate}[label=\alph*)]
+\tightlist
+    \item os diálogos serão apenas para o aluno em atendimento de uma secretaria acadêmica, dessa forma os diálogos de tutoria não fazem parte deste trabalho;
+    \item será desenvolvido o \textit{chatbot} compatível com a plataforma de mensagens instantâneas Telegram, as demais plataformas não fazem parte do escopo deste trabalho;
+    \item conversação via texto, as outras formas de conversação não fazem parte deste.
+\end{enumerate}
+
+\section{Organização do trabalho}
+
+A estrutura do trabalho apresenta a seguinte sequência:
+
+\begin{enumerate}[label=\alph*)]
+\tightlist
+    \item capítulo 1: tem como objetivo contextualizar este trabalho; 
+    \item capítulo 2: contém o referencial teórico deste trabalho, que tem como objetivo principal contextualizar o leitor sobre o que são \textit{chatbots}, suas características, diferenças, funcionalidades, áreas de atuação e como se pode projeta-los e desenvolve-los;
+    \item capítulo 3: apresenta o projeto, documentando todas as etapas que foram necessárias para o desenvolvimento de EVA;
+    \item capítulo 4: apresenta o sistema de EVA já em funcionamento;
+    \item capítulo 5: aponta a conclusão do trabalho e sugere alguns pontos para trabalhos futuros.
+\end{enumerate}
+
+%--

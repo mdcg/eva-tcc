@@ -1,0 +1,135 @@
+% MIT License
+%
+% Copyright (c) 2018 José Nascimento <joseaugustodearaujonascimento@gmail.com>
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\chapter{Simulação da interação de um aluno com EVA}
+
+Por meio de simulações de interações com os alunos da EV.G, neste capítulo, serão apresentadas as principais funcionalidades desenvolvidas de EVA, que estará vinculada à plataforma de mensagens instantâneas Telegram. É válido salientar, que por motivos de segurança e integridade, como estão sendo utilizados dados reais dos alunos vinculados a EV.G, em algumas figuras foram postas tarjas pretas sob informações que são consideradas pessoais do usuário.
+
+\section{Preparando o ambiente para as simulações}
+
+Antes de iniciar de fato as simulações, necessita-se que o sistema de EVA esteja em execução.
+Como este trabalho tende a ficar desatualizado, seja por questões tecnológicas ou até dado a alguma mudança no escopo do projeto por parte da EV.G, as instruções para configurar e instalar todas as dependências do sistema estarão disponíveis, e também, estarão sendo atualizadas com frequência no repositório oficial do projeto, que pode ser acessado pelo endereço eletrônico "http://github.com/evatalk".
+
+\section{Iniciando uma conversa}
+
+Como EVA está vinculada ao Telegram, inicialmente necessitará a instalação e execução deste \textit{messenger} em algum aparelho de telefone celular. Tendo isto em mente, basta acessar a opção "pesquisar" no Telegram, digitar "@evgvirtualassistantbot" e clicar na primeira opção de resposta. Logo em seguida, ao inicializar uma conversa com EVA, ela dará as boas-vindas e irá solicitar ao usuário que o mesmo se autentique, fornecendo o CPF ou o e-mail cadastrado na EV.G. Na Figura \ref{cap:04:fig:apresentacao-boas-vindas} é demonstrada tal situação.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-boas-vindas}
+    EVA - Boas-vindas
+  }
+  \includegraphics[width=0.2\linewidth]{imagens/apresentacao-boas-vindas.png}
+  \mfonte
+\end{figure}
+
+\section{Autenticando}
+O usuário poderá se autenticar para usufruir das funcionalidades mais sofisticadas de EVA. Para essa funcionalidade existem dois cenários possíveis: O de falha e o de sucesso na autenticação.
+
+\subsection{Falha na autenticação}
+Caso as credenciais fornecidas pelo usuário não estiverem corretas, EVA irá enviar uma mensagem dizendo que os dados não conferem e irá solicitar que o usuário informe o CPF ou o e-mail novamente. Se o usuário tentar se autenticar sem sucesso por três vezes consecutivas, o sistema irá bloqueá-lo por 24 horas e o \textit{chatbot} irá informar tal acontecimento ao usuário. Essas situações são apresentadas na Figura \ref{cap:04:fig:apresentacao-autenticação-falha}.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-autenticação-falha}
+    EVA - Bloqueio de usuário
+  }
+  \includegraphics[width=0.2\linewidth]{imagens/apresentacao-autenticacao-falha.png}
+  \mfonte
+\end{figure}
+
+\subsection{Sucesso na autenticação}
+O aluno conseguiu se autenticar com sucesso no sistema e passará a ter acesso às funcionalidades mais sofisticadas de EVA. Na Figura \ref{cap:04:fig:apresentacao-autenticação-sucesso} este caso é apresentado.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-autenticação-sucesso}
+    EVA - Autenticação realizada com sucesso
+  }
+  \includegraphics[width=0.2\linewidth]{imagens/apresentacao-autenticacao-sucesso.png}
+  \mfonte
+\end{figure}
+
+\section{Dialogando com EVA}
+
+Por se tratar de um \textit{chatbot} de domínio amplo, EVA compreende algumas nuances nas mensagens enviadas por um aluno, compreendendo quais funcionalidades ele deseja utilizar e também sabendo quando um usuário está a cumprimentando, xingando e até mesmo quando recebe mensagens de afeto, como mostrada na Figura \ref{cap:04:fig:apresentacao-dialogos}.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-dialogos}
+    EVA - Dialogando
+  }
+  \includegraphics[width=0.4\linewidth]{imagens/apresentacao-dialogos.png}
+  \mfonte
+\end{figure}
+
+\section{Visualizando o histórico escolar completo}
+
+O aluno pode consultar o seu histórico escolar completo de maneira rápida e prática, como apresentado na Figura \ref{cap:04:fig:apresentacao-visualizar-historico}.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-visualizar-historico}
+    EVA - Visualizando histórico escolar completo
+  }
+  \includegraphics[width=0.2\linewidth]{imagens/apresentacao-visualizar-historico.png}
+  \mfonte
+\end{figure}
+
+\section{Auxiliando na emissão de certificados}
+
+Se o aluno desejar, EVA pode auxiliá-lo na emissão de certificados dos cursos concluídos por ele, como exibido na Figura \ref{cap:04:fig:apresentacao-auxilio-certificados}.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-auxilio-certificados}
+    EVA - Auxiliando na emissão de certificados
+  }
+  \includegraphics[width=0.4\linewidth]{imagens/apresentacao-auxilio-certificados.png}
+  \mfonte
+\end{figure}
+
+\section{Visualizando inscrições de cursos em aberto}
+
+Caso o aluno esteja em dúvida sobre quais inscrições de cursos estão em aberto, com uma mensagem de texto ele terá acesso a essas informações, como apresentado na Figura \ref{cap:04:fig:apresentacao-inscricoes-aberto}.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-inscricoes-aberto}
+    EVA - Visualizando inscrições de cursos em aberto
+  }
+  \includegraphics[width=0.2\linewidth]{imagens/apresentacao-cursos-aberto.png}
+  \mfonte
+\end{figure}
+
+\section{Desvinculando}
+
+A qualquer momento, se for da vontade do aluno, ele poderá se desvincular do sistema de EVA, apenas enviando uma simples mensagem de texto, demonstrado na Figura \ref{cap:04:fig:apresentacao-logout}.
+
+\begin{figure}
+  \caption{
+    \label{cap:04:fig:apresentacao-logout}
+    EVA - Logout
+  }
+  \includegraphics[width=0.2\linewidth]{imagens/apresentacao-logout.png}
+  \mfonte
+\end{figure}
